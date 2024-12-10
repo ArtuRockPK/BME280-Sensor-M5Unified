@@ -54,6 +54,7 @@ void setup() {
   auto cfg = M5.config();     // Получение конфигурации устройства M5Stack. / Getting the configuration of the M5Stack device.
   M5.begin(cfg);              // Инициализация устройства M5Stack с заданной конфигурацией. / Initializing the M5Stack device with the given configuration.
   Wire.begin();               // Инициализация шины I2C. / Initializing the I2C bus.
+  bme.begin();                // Инициализация bme280 сенсора / Initializing bme280 sensor 
   setUpDisplay();             // Вызов функции настройки дисплея. / Calling the display setup function.
   Serial.begin(SERIAL_BAUD);  // Настройка последовательного порта для отладки. / Setting up the serial port for debugging.
 
